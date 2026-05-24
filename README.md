@@ -1,5 +1,10 @@
 # Ford Care+ — Desafio 2 (Fidelização Pós-Venda)
 
+## Grupo 02
+
+- Glauco Heitor Gonçalves — RM 555978
+- Pedro Henrique Junqueira — RM 556278
+
 App mobile **React Native + Expo** (Expo Go) para retenção e fidelização de clientes Ford no pós-venda.
 
 ## Como rodar
