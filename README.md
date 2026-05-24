@@ -11,10 +11,13 @@ App mobile **React Native + Expo** (Expo Go) para retenção e fidelização de 
 
 ```bash
 cd SPRINT-FORD
-npm start
+npm install
+npx expo start --clear
 ```
 
-Escaneie o QR Code com o **Expo Go** no celular (mesma rede Wi‑Fi).
+Escaneie o QR Code com o **Expo Go** no celular (mesma rede Wi‑Fi), ou acesse `localhost:8081` no browser.
+
+> **Requisitos:** Node.js 20.12+ e os pacotes `react-native-web` e `react-dom` são necessários para rodar no browser (já incluídos nas dependências).
 
 ## Funcionalidades
 
