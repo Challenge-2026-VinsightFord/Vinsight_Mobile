@@ -31,6 +31,7 @@ function Navegacao() {
     <Stack screenOptions={opcoesCabecalho}>
       <Stack.Protected guard={autenticado}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="lead/[id]" options={{ title: 'Detalhe do lead', headerBackTitle: 'Fila' }} />
         <Stack.Screen name="catalogo" options={{ title: 'Design system' }} />
       </Stack.Protected>
       <Stack.Protected guard={!autenticado}>

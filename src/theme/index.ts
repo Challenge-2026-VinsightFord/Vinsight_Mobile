@@ -62,6 +62,7 @@ export type VarianteTexto = keyof typeof tipografia;
 
 // boxShadow (RN 0.76+) funciona igual no Android, no iOS e na web; os props shadow* estão obsoletos.
 export const sombra = {
+  sutil: { boxShadow: `0 1px 3px ${cores.sombraForte}` },
   cartao: { boxShadow: `0 2px 8px ${cores.sombraSuave}` },
   flutuante: { boxShadow: `0 6px 16px ${cores.sombraForte}` },
 } satisfies Record<string, ViewStyle>;

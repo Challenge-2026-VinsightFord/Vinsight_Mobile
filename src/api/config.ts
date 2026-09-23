@@ -14,7 +14,8 @@ export const API_URL = resolverApiUrl();
 export const PREFIXO_API = '/api/v1';
 
 export const TIMEOUT_MS = 15_000;
-export const TAMANHO_PAGINA = 20;
+/** Itens por página nas listas. Reduza (ex.: EXPO_PUBLIC_TAMANHO_PAGINA=2) para ver a rolagem infinita com poucos dados. */
+export const TAMANHO_PAGINA = Number(process.env.EXPO_PUBLIC_TAMANHO_PAGINA) || 20;
 /** Atraso artificial do mock, para os estados de carregamento aparecerem na demo. */
 export const LATENCIA_MOCK_MS = 450;
 /**

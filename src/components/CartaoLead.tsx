@@ -32,9 +32,15 @@ export const CartaoLead = memo(function CartaoLead({ lead, onPress }: CartaoLead
           </Texto>
           <View style={estilos.linhaVeiculo}>
             <Ionicons name="car-sport" size={tamanho.icone.sm} color={cores.textoSuave} />
-            <Texto variante="legenda" cor="textoSecundario" numberOfLines={1} style={estilos.flex}>
-              {nomeVeiculo} · {veiculo.ano} · {formatarPlaca(lead.placa)}
+            <Texto variante="legenda" cor="textoSecundario" numberOfLines={1} style={estilos.encolhe}>
+              {nomeVeiculo} · {veiculo.ano}
             </Texto>
+            {/* A placa é como o consultor identifica o carro: nunca é cortada. */}
+            <View style={estilos.placa}>
+              <Texto variante="legendaForte" cor="texto">
+                {formatarPlaca(lead.placa)}
+              </Texto>
+            </View>
           </View>
           <View style={estilos.chips}>
             <ChipRisco faixa={lead.faixaRisco} />
@@ -72,6 +78,14 @@ const estilos = StyleSheet.create({
   topo: { flexDirection: 'row', gap: espaco.md, alignItems: 'flex-start' },
   identificacao: { flex: 1, gap: espaco.xs },
   linhaVeiculo: { flexDirection: 'row', alignItems: 'center', gap: espaco.xs },
+  encolhe: { flexShrink: 1 },
+  placa: {
+    paddingHorizontal: espaco.xs + espaco.xxs,
+    borderRadius: raio.sm,
+    borderWidth: 1,
+    borderColor: cores.bordaForte,
+    backgroundColor: cores.superficie,
+  },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: espaco.xs, marginTop: espaco.xs },
   divisor: { height: 1, backgroundColor: cores.borda, marginVertical: espaco.md },
   bloco: { gap: espaco.xxs },
