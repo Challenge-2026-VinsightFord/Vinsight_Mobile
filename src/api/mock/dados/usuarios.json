@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nome": "Ana Souza",
+    "email": "consultor@ford.com.br",
+    "perfil": "CONSULTOR",
+    "concessionaria": {
+      "id": 1,
+      "nome": "Ford Morumbi",
+      "codigo": "SP-001"
+    },
+    "senha": "consultor123"
+  },
+  {
+    "id": 3,
+    "nome": "Carla Nunes",
+    "email": "consultor.campinas@ford.com.br",
+    "perfil": "CONSULTOR",
+    "concessionaria": {
+      "id": 2,
+      "nome": "Ford Campinas",
+      "codigo": "SP-014"
+    },
+    "senha": "consultor123"
+  },
+  {
+    "id": 4,
+    "nome": "Diego Alves",
+    "email": "consultor.poa@ford.com.br",
+    "perfil": "CONSULTOR",
+    "concessionaria": {
+      "id": 3,
+      "nome": "Ford Porto Alegre",
+      "codigo": "RS-003"
+    },
+    "senha": "consultor123"
+  },
+  {
+    "id": 5,
+    "nome": "Eduardo Reis",
+    "email": "gerente@ford.com.br",
+    "perfil": "GERENTE",
+    "concessionaria": {
+      "id": 1,
+      "nome": "Ford Morumbi",
+      "codigo": "SP-001"
+    },
+    "senha": "gerente123"
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "veiculo": {
+      "id": 1,
+      "vin": "9BF8313PF9WBWDX01",
+      "placa": "WCD1Z37",
+      "modelo": "Ranger"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-02T09:00:00",
+    "tipoServico": "REPARO",
+    "status": "CONFIRMADO",
+    "observacoes": null,
+    "valorEstimado": 637,
+    "dataCriacao": "2026-09-02T11:00:00"
+  },
+  {
+    "id": 2,
+    "veiculo": {
+      "id": 3,
+      "vin": "9BFRHMLMFR0P96DF3",
+      "placa": "FSM3V91",
+      "modelo": "Bronco Sport"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-03T10:00:00",
+    "tipoServico": "GARANTIA",
+    "status": "REALIZADO",
+    "observacoes": null,
+    "valorEstimado": 774,
+    "dataCriacao": "2026-09-03T11:00:00"
+  },
+  {
+    "id": 3,
+    "veiculo": {
+      "id": 5,
+      "vin": "9BFC05GG9JY36J9B5",
+      "placa": "LFX5V55",
+      "modelo": "Mustang Mach-E"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-04T11:00:00",
+    "tipoServico": "RECALL",
+    "status": "CANCELADO",
+    "observacoes": null,
+    "valorEstimado": 911,
+    "dataCriacao": "2026-09-04T11:00:00"
+  },
+  {
+    "id": 4,
+    "veiculo": {
+      "id": 7,
+      "vin": "9BFB384GY4WZJDPH7",
+      "placa": "WLJ7R19",
+      "modelo": "EcoSport"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-05T12:00:00",
+    "tipoServico": "REVISAO_PROGRAMADA",
+    "status": "AGENDADO",
+    "observacoes": null,
+    "valorEstimado": 1048,
+    "dataCriacao": "2026-09-05T11:00:00"
+  },
+  {
+    "id": 5,
+    "veiculo": {
+      "id": 9,
+      "vin": "9BF2NPNC4S1X1FCW9",
+      "placa": "GCL9G73",
+      "modelo": "Ranger"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-06T13:00:00",
+    "tipoServico": "REPARO",
+    "status": "CONFIRMADO",
+    "observacoes": null,
+    "valorEstimado": 1185,
+    "dataCriacao": "2026-09-06T11:00:00"
+  },
+  {
+    "id": 6,
+    "veiculo": {
+      "id": 11,
+      "vin": "9BF60R6786867X7T1",
+      "placa": "TYW1T37",
+      "modelo": "Bronco Sport"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-07T14:00:00",
+    "tipoServico": "GARANTIA",
+    "status": "REALIZADO",
+    "observacoes": null,
+    "valorEstimado": 1322,
+    "dataCriacao": "2026-09-07T11:00:00"
+  },
+  {
+    "id": 7,
+    "veiculo": {
+      "id": 13,
+      "vin": "9BFHFX2N86KR4JYW3",
+      "placa": "BRL3K91",
+      "modelo": "Mustang Mach-E"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-08T15:00:00",
+    "tipoServico": "RECALL",
+    "status": "CANCELADO",
+    "observacoes": null,
+    "valorEstimado": 1459,
+    "dataCriacao": "2026-09-08T11:00:00"
+  },
+  {
+    "id": 8,
+    "veiculo": {
+      "id": 15,
+      "vin": "9BFXT2WTVLHWT09F5",
+      "placa": "SHP5M55",
+      "modelo": "EcoSport"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-09T16:00:00",
+    "tipoServico": "REVISAO_PROGRAMADA",
+    "status": "AGENDADO",
+    "observacoes": null,
+    "valorEstimado": 1596,
+    "dataCriacao": "2026-09-09T11:00:00"
+  },
+  {
+    "id": 9,
+    "veiculo": {
+      "id": 17,
+      "vin": "9BF5WWL6LP3RL90L7",
+      "placa": "PMX7X19",
+      "modelo": "Ranger"
+    },
+    "concessionaria": {
+      "id": 1,
+      "nomeFantasia": "Ford Morumbi"
+    },
+    "dataHora": "2026-10-10T08:00:00",
+    "tipoServico": "REPARO",
+    "status": "CONFIRMADO",
+    "observacoes": null,
+    "valorEstimado": 1733,
+    "dataCriacao": "2026-09-10T11:00:00"
+  }
+]

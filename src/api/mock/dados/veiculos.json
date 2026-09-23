@@ -1,0 +1,1083 @@
+{
+  "9BF2NPNC4S1X1FCW9": {
+    "id": 9,
+    "vin": "9BF2NPNC4S1X1FCW9",
+    "placa": "GCL9G73",
+    "modelo": "Ranger",
+    "versao": "Limited 3.0 V6",
+    "ano": 2020,
+    "cor": "Cinza",
+    "quilometragemEstimada": 81233,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2022-10-27",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 120000,
+      "dataEstimada": "2027-02-27",
+      "situacao": "EM_DIA"
+    },
+    "aderenciaRede": 0.67,
+    "ultimaTelemetria": null,
+    "historico": [
+      {
+        "id": 34,
+        "data": "2026-02-27",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 72.000 km",
+        "valor": 1306,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 35,
+        "data": "2025-08-31",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1609,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 36,
+        "data": "2025-03-04",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1412,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BFJKD4NL04BHG2Z4": {
+    "id": 4,
+    "vin": "9BFJKD4NL04BHG2Z4",
+    "placa": "XBH4G28",
+    "modelo": "Maverick",
+    "versao": "Lariat 2.0",
+    "ano": 2023,
+    "cor": "Vermelho",
+    "quilometragemEstimada": 20548,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2025-09-12",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 40000,
+      "dataEstimada": "2026-06-17",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 1,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-19T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 13,
+        "data": "2026-02-02",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 11.000 km",
+        "valor": 821,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 14,
+        "data": "2025-08-06",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1124,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 15,
+        "data": "2025-02-07",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 927,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 16,
+        "data": "2024-08-11",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 980,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BFHFX2N86KR4JYW3": {
+    "id": 13,
+    "vin": "9BFHFX2N86KR4JYW3",
+    "placa": "BRL3K91",
+    "modelo": "Mustang Mach-E",
+    "versao": "GT",
+    "ano": 2024,
+    "cor": "Preto",
+    "quilometragemEstimada": 61781,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2026-06-11",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 90000,
+      "dataEstimada": "2026-11-07",
+      "situacao": "EM_DIA"
+    },
+    "aderenciaRede": 1,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-20T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 49,
+        "data": "2026-01-06",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1694,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 50,
+        "data": "2025-07-10",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 43.000 km",
+        "valor": 1747,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 51,
+        "data": "2025-01-11",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 2050,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 52,
+        "data": "2024-07-15",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1853,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BFRHMLMFR0P96DF3": {
+    "id": 3,
+    "vin": "9BFRHMLMFR0P96DF3",
+    "placa": "FSM3V91",
+    "modelo": "Bronco Sport",
+    "versao": "Wildtrak 2.0",
+    "ano": 2022,
+    "cor": "Cinza",
+    "quilometragemEstimada": 80411,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2024-04-09",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 100000,
+      "dataEstimada": "2026-11-17",
+      "situacao": "EM_DIA"
+    },
+    "aderenciaRede": 0,
+    "ultimaTelemetria": null,
+    "historico": [
+      {
+        "id": 10,
+        "data": "2026-02-15",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 724,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 11,
+        "data": "2025-08-19",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 62.000 km",
+        "valor": 777,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 12,
+        "data": "2025-02-20",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1080,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BF5WWL6LP3RL90L7": {
+    "id": 17,
+    "vin": "9BF5WWL6LP3RL90L7",
+    "placa": "PMX7X19",
+    "modelo": "Ranger",
+    "versao": "Limited 3.0 V6",
+    "ano": 2020,
+    "cor": "Azul",
+    "quilometragemEstimada": 82329,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2022-02-23",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 120000,
+      "dataEstimada": "2027-01-14",
+      "situacao": "EM_DIA"
+    },
+    "aderenciaRede": 0.2,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-16T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 65,
+        "data": "2026-02-13",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 2082,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 66,
+        "data": "2025-08-17",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 2135,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 67,
+        "data": "2025-02-18",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 55.000 km",
+        "valor": 388,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 68,
+        "data": "2024-08-22",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 691,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 69,
+        "data": "2024-02-24",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 494,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BFSKSX7MLBPT9272": {
+    "id": 12,
+    "vin": "9BFSKSX7MLBPT9272",
+    "placa": "CCK2C64",
+    "modelo": "Maverick",
+    "versao": "Lariat 2.0",
+    "ano": 2023,
+    "cor": "Prata",
+    "quilometragemEstimada": 21644,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2025-01-08",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 40000,
+      "dataEstimada": "2026-07-03",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 1,
+    "ultimaTelemetria": null,
+    "historico": [
+      {
+        "id": 46,
+        "data": "2026-01-19",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1597,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 47,
+        "data": "2025-07-23",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1650,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 48,
+        "data": "2025-01-24",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 5.000 km",
+        "valor": 1703,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BFB384GY4WZJDPH7": {
+    "id": 7,
+    "vin": "9BFB384GY4WZJDPH7",
+    "placa": "WLJ7R19",
+    "modelo": "EcoSport",
+    "versao": "Freestyle 1.5",
+    "ano": 2026,
+    "cor": "Preto",
+    "quilometragemEstimada": 60959,
+    "garantia": {
+      "status": "ATIVA",
+      "dataLimite": "2028-12-21",
+      "mesesRestantes": 26
+    },
+    "proximaRevisaoPrevista": {
+      "km": 75000,
+      "dataEstimada": "2027-01-24",
+      "situacao": "EM_DIA"
+    },
+    "aderenciaRede": 0,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-22T01:10:00Z",
+      "codigosFalha": [
+        "P0420"
+      ]
+    },
+    "historico": [
+      {
+        "id": 25,
+        "data": "2026-03-25",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1112,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 26,
+        "data": "2025-09-26",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1165,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 27,
+        "data": "2025-03-30",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 33.000 km",
+        "valor": 1218,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 28,
+        "data": "2024-10-01",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1521,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BFT1S782CWZJG7X2": {
+    "id": 2,
+    "vin": "9BFT1S782CWZJG7X2",
+    "placa": "WFX2J64",
+    "modelo": "Territory",
+    "versao": "Titanium 1.5T",
+    "ano": 2021,
+    "cor": "Branco",
+    "quilometragemEstimada": 60274,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2023-11-07",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 80000,
+      "dataEstimada": "2026-08-02",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 0.6,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-17T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 5,
+        "data": "2026-02-28",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 627,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 6,
+        "data": "2025-09-01",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 680,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 7,
+        "data": "2025-03-05",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 33.000 km",
+        "valor": 733,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 8,
+        "data": "2024-09-06",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1036,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 9,
+        "data": "2024-03-10",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 839,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BF60R6786867X7T1": {
+    "id": 11,
+    "vin": "9BF60R6786867X7T1",
+    "placa": "TYW1T37",
+    "modelo": "Bronco Sport",
+    "versao": "Wildtrak 2.0",
+    "ano": 2022,
+    "cor": "Azul",
+    "quilometragemEstimada": 81507,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2024-08-05",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 100000,
+      "dataEstimada": "2026-10-04",
+      "situacao": "PROXIMA"
+    },
+    "aderenciaRede": 0.6,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-18T01:10:00Z",
+      "codigosFalha": [
+        "P0301",
+        "P0171"
+      ]
+    },
+    "historico": [
+      {
+        "id": 41,
+        "data": "2026-02-01",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1500,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 42,
+        "data": "2025-08-05",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1553,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 43,
+        "data": "2025-02-06",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1606,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 44,
+        "data": "2024-08-10",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 45.000 km",
+        "valor": 1659,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 45,
+        "data": "2024-02-12",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1962,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BF8313PF9WBWDX01": {
+    "id": 1,
+    "vin": "9BF8313PF9WBWDX01",
+    "placa": "WCD1Z37",
+    "modelo": "Ranger",
+    "versao": "Limited 3.0 V6",
+    "ano": 2020,
+    "cor": "Preto",
+    "quilometragemEstimada": 80137,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2022-06-03",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 120000,
+      "dataEstimada": "2026-10-14",
+      "situacao": "PROXIMA"
+    },
+    "aderenciaRede": 0.8,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-16T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 149,
+        "data": "2026-08-20",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisão de 80.000 km",
+        "valor": 1250,
+        "concessionaria": "Ford Campinas",
+        "naRede": true
+      },
+      {
+        "id": 1,
+        "data": "2026-03-13",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 530,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 2,
+        "data": "2025-09-14",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 583,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 3,
+        "data": "2025-03-18",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 636,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 4,
+        "data": "2024-09-19",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 44.000 km",
+        "valor": 689,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BFTD9B1FS40TRG00": {
+    "id": 10,
+    "vin": "9BFTD9B1FS40TRG00",
+    "placa": "FNP0C00",
+    "modelo": "Territory",
+    "versao": "Titanium 1.5T",
+    "ano": 2021,
+    "cor": "Vermelho",
+    "quilometragemEstimada": 61370,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2023-03-03",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 80000,
+      "dataEstimada": "2026-08-18",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 0.25,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-17T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 37,
+        "data": "2026-02-14",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1653,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 38,
+        "data": "2025-08-18",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1456,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 39,
+        "data": "2025-02-19",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1509,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 40,
+        "data": "2024-08-23",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1562,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BFC05GG9JY36J9B5": {
+    "id": 5,
+    "vin": "9BFC05GG9JY36J9B5",
+    "placa": "LFX5V55",
+    "modelo": "Mustang Mach-E",
+    "versao": "GT",
+    "ano": 2024,
+    "cor": "Azul",
+    "quilometragemEstimada": 60685,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2026-02-15",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 90000,
+      "dataEstimada": "2026-12-21",
+      "situacao": "EM_DIA"
+    },
+    "aderenciaRede": 0.8,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-20T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 17,
+        "data": "2026-01-20",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1168,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 18,
+        "data": "2025-07-24",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 971,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 19,
+        "data": "2025-01-25",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1024,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 20,
+        "data": "2024-07-29",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1077,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 21,
+        "data": "2024-01-31",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 15.000 km",
+        "valor": 1130,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BFPPDCN0WNL6F676": {
+    "id": 6,
+    "vin": "9BFPPDCN0WNL6F676",
+    "placa": "JZY6N82",
+    "modelo": "Ka",
+    "versao": "SE 1.0",
+    "ano": 2025,
+    "cor": "Prata",
+    "quilometragemEstimada": 30822,
+    "garantia": {
+      "status": "ATIVA",
+      "dataLimite": "2027-07-19",
+      "mesesRestantes": 9
+    },
+    "proximaRevisaoPrevista": {
+      "km": 40000,
+      "dataEstimada": "2026-05-02",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 0.67,
+    "ultimaTelemetria": null,
+    "historico": [
+      {
+        "id": 22,
+        "data": "2026-01-07",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1015,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 23,
+        "data": "2025-07-11",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1068,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 24,
+        "data": "2025-01-12",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1121,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BFCYFCZVYW2CPYF8": {
+    "id": 8,
+    "vin": "9BFCYFCZVYW2CPYF8",
+    "placa": "FXG8L46",
+    "modelo": "Ranger",
+    "versao": "XLT 3.2 Diesel",
+    "ano": 2019,
+    "cor": "Branco",
+    "quilometragemEstimada": 41096,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2021-05-24",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 80000,
+      "dataEstimada": "2026-03-17",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 1,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-15T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 29,
+        "data": "2026-03-12",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1209,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 30,
+        "data": "2025-09-13",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 23.000 km",
+        "valor": 1262,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 31,
+        "data": "2025-03-17",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1565,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 32,
+        "data": "2024-09-18",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1368,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 33,
+        "data": "2024-03-22",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1421,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  },
+  "9BFNFR521M8R9GGW4": {
+    "id": 14,
+    "vin": "9BFNFR521M8R9GGW4",
+    "placa": "TMW4M28",
+    "modelo": "Ka",
+    "versao": "SE 1.0",
+    "ano": 2025,
+    "cor": "Branco",
+    "quilometragemEstimada": 31918,
+    "garantia": {
+      "status": "ATIVA",
+      "dataLimite": "2027-11-15",
+      "mesesRestantes": 13
+    },
+    "proximaRevisaoPrevista": {
+      "km": 40000,
+      "dataEstimada": "2026-05-18",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 0.4,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-21T01:10:00Z",
+      "codigosFalha": [
+        "P0420"
+      ]
+    },
+    "historico": [
+      {
+        "id": 53,
+        "data": "2026-03-24",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 22.000 km",
+        "valor": 1791,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 54,
+        "data": "2025-09-25",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 2094,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 55,
+        "data": "2025-03-29",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1897,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 56,
+        "data": "2024-09-30",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1950,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 57,
+        "data": "2024-04-03",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 2003,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BFXT2WTVLHWT09F5": {
+    "id": 15,
+    "vin": "9BFXT2WTVLHWT09F5",
+    "placa": "SHP5M55",
+    "modelo": "EcoSport",
+    "versao": "Freestyle 1.5",
+    "ano": 2026,
+    "cor": "Cinza",
+    "quilometragemEstimada": 62055,
+    "garantia": {
+      "status": "ATIVA",
+      "dataLimite": "2028-04-17",
+      "mesesRestantes": 18
+    },
+    "proximaRevisaoPrevista": {
+      "km": 75000,
+      "dataEstimada": "2026-12-11",
+      "situacao": "EM_DIA"
+    },
+    "aderenciaRede": 0.33,
+    "ultimaTelemetria": null,
+    "historico": [
+      {
+        "id": 58,
+        "data": "2026-03-11",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 2138,
+        "concessionaria": null,
+        "naRede": false
+      },
+      {
+        "id": 59,
+        "data": "2025-09-12",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1941,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 60,
+        "data": "2025-03-16",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1994,
+        "concessionaria": null,
+        "naRede": false
+      }
+    ]
+  },
+  "9BF28PJXK1WLZ5S16": {
+    "id": 16,
+    "vin": "9BF28PJXK1WLZ5S16",
+    "placa": "TPZ6Z82",
+    "modelo": "Ranger",
+    "versao": "XLT 3.2 Diesel",
+    "ano": 2019,
+    "cor": "Vermelho",
+    "quilometragemEstimada": 42192,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2021-09-20",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 80000,
+      "dataEstimada": "2026-04-02",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 1,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-15T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 61,
+        "data": "2026-02-26",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1985,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 62,
+        "data": "2025-08-30",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 2038,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 63,
+        "data": "2025-03-03",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 2091,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 64,
+        "data": "2024-09-04",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 6.000 km",
+        "valor": 2144,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      }
+    ]
+  }
+}
