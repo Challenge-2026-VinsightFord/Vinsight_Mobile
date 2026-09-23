@@ -1,7 +1,17 @@
 import { Text, type TextProps } from 'react-native';
 import { cores, tipografia, type VarianteTexto } from '@/theme';
 
-type CorTexto = 'texto' | 'textoSecundario' | 'textoSuave' | 'primaria' | 'destaque' | 'perigo' | 'sucesso' | 'alerta' | 'sobrePrimaria';
+type CorTexto =
+  | 'texto'
+  | 'textoSecundario'
+  | 'textoSuave'
+  | 'primaria'
+  | 'destaque'
+  | 'perigo'
+  | 'sucesso'
+  | 'alerta'
+  | 'sobrePrimaria'
+  | 'sobrePrimariaSuave';
 
 export interface TextoProps extends TextProps {
   variante?: VarianteTexto;

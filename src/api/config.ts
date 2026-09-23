@@ -17,6 +17,13 @@ export const TIMEOUT_MS = 15_000;
 export const TAMANHO_PAGINA = 20;
 /** Atraso artificial do mock, para os estados de carregamento aparecerem na demo. */
 export const LATENCIA_MOCK_MS = 450;
+/**
+ * Validade dos tokens do mock, em segundos (padrão igual ao da API: 15 min e 8 h).
+ * Encurte para testar a renovação e a expiração de sessão sem esperar:
+ *   EXPO_PUBLIC_MOCK_ACCESS_TTL=20  EXPO_PUBLIC_MOCK_REFRESH_TTL=60
+ */
+export const MOCK_ACCESS_TTL_S = Number(process.env.EXPO_PUBLIC_MOCK_ACCESS_TTL) || 900;
+export const MOCK_REFRESH_TTL_S = Number(process.env.EXPO_PUBLIC_MOCK_REFRESH_TTL) || 8 * 60 * 60;
 
 function resolverApiUrl(): string {
   const explicita = process.env.EXPO_PUBLIC_API_URL;

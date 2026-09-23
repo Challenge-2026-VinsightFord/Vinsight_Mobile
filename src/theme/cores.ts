@@ -7,6 +7,7 @@ const paleta = {
   azulOval: '#003478', // azul do oval, para superfícies escuras
   azulDestaque: '#066FEF', // links, foco e realces
   azulGelo: '#E8EFFB',
+  azulNevoa: '#C3C8EB', // texto secundário sobre o azul Ford
 
   branco: '#FFFFFF',
   cinza50: '#F5F7FA',
@@ -33,6 +34,9 @@ export const cores = {
   primariaSuave: paleta.azulGelo,
   destaque: paleta.azulDestaque,
   sobrePrimaria: paleta.branco,
+  sobrePrimariaSuave: paleta.azulNevoa,
+  /** Véu translúcido sobre o azul Ford (ícones e selos na área de marca). */
+  realceSobrePrimaria: 'rgba(255, 255, 255, 0.12)',
 
   fundo: paleta.cinza50,
   superficie: paleta.branco,

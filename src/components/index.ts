@@ -1,3 +1,4 @@
+export { Aviso, type AvisoProps } from './Aviso';
 export { Botao, type BotaoProps } from './Botao';
 export { CampoTexto, type CampoTextoProps } from './CampoTexto';
 export { Cartao, type CartaoProps } from './Cartao';

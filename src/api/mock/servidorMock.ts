@@ -1,4 +1,4 @@
-import { LATENCIA_MOCK_MS, PREFIXO_API } from '../config';
+import { LATENCIA_MOCK_MS, MOCK_ACCESS_TTL_S, MOCK_REFRESH_TTL_S, PREFIXO_API } from '../config';
 import type { RequisicaoTransporte, RespostaTransporte, Transporte } from '../http';
 import type {
   DetalheAgendamento,
@@ -96,16 +96,13 @@ function paginar<T>(itens: T[], query: Query): Pagina<T> {
 
 // ---------- Tokens falsos: mock.<tipo>.<idUsuario>.<expiraEmMs> ----------
 
-const QUINZE_MIN = 15 * 60 * 1000;
-const OITO_HORAS = 8 * 60 * 60 * 1000;
-
 function emitirTokens(usuario: UsuarioMock): RespostaLogin {
   const agora = Date.now();
   const { senha: _senha, ...publico } = usuario;
   return {
-    accessToken: `mock.access.${usuario.id}.${agora + QUINZE_MIN}`,
-    refreshToken: `mock.refresh.${usuario.id}.${agora + OITO_HORAS}`,
-    expiresIn: QUINZE_MIN / 1000,
+    accessToken: `mock.access.${usuario.id}.${agora + MOCK_ACCESS_TTL_S * 1000}`,
+    refreshToken: `mock.refresh.${usuario.id}.${agora + MOCK_REFRESH_TTL_S * 1000}`,
+    expiresIn: MOCK_ACCESS_TTL_S,
     usuario: publico,
   };
 }

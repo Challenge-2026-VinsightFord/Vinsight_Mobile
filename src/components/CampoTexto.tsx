@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { forwardRef, useState } from 'react';
-import { Pressable, StyleSheet, TextInput, View, type TextInputProps } from 'react-native';
+import { Platform, Pressable, StyleSheet, TextInput, View, type TextInputProps } from 'react-native';
 import type { NomeIcone } from '@/dominio/apresentacao';
 import { cores, espaco, raio, tamanho, tipografia } from '@/theme';
 import { Texto } from './Texto';
@@ -105,6 +105,8 @@ const estilos = StyleSheet.create({
     ...tipografia.corpo,
     color: cores.texto,
     paddingVertical: espaco.md,
+    // Na web o navegador desenha o próprio contorno de foco; a borda da caixa já indica o foco.
+    ...(Platform.OS === 'web' && { outlineWidth: 0 }),
   },
   linhaErro: { flexDirection: 'row', alignItems: 'center', gap: espaco.xs, marginTop: espaco.xs },
   dica: { marginTop: espaco.xs },
