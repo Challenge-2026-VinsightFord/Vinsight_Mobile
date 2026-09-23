@@ -5,6 +5,8 @@ import { StyleSheet, View } from 'react-native';
 import { API_URL, USE_MOCK, type Perfil } from '@/api';
 import { Botao, Cartao, Chip, Tela, Texto } from '@/components';
 import { useSessao, useUsuario } from '@/sessao/ProvedorSessao';
+import type { NomeIcone } from '@/dominio/apresentacao';
+import { useRegistros } from '@/sincronizacao/ProvedorRegistros';
 import { cores, espaco, raio, tamanho } from '@/theme';
 import { confirmar } from '@/utils/confirmar';
 
@@ -24,21 +26,38 @@ const iniciais = (nome: string) =>
     .join('')
     .toUpperCase();
 
-// Contadores do dia (contatos, agendamentos) entram com o registro de desfecho (US-48).
 export default function Resumo() {
   const usuario = useUsuario();
   const { sair } = useSessao();
+  const { contadores, pendentes, descartarTodos } = useRegistros();
   const [saindo, setSaindo] = useState(false);
 
+  const aguardando = pendentes.filter((p) => !p.falha).length;
+  const registrados = Object.values(contadores).reduce((soma, n) => soma + (n ?? 0), 0);
+
   async function encerrarSessao() {
-    const ok = await confirmar('Sair do VINSight', 'Você precisará entrar novamente com e-mail e senha.', 'Sair');
+    const mensagem = aguardando
+      ? `Há ${aguardando} ${aguardando === 1 ? 'registro' : 'registros'} de contato ainda não ${aguardando === 1 ? 'enviado' : 'enviados'}. Ao sair, ${aguardando === 1 ? 'ele será descartado' : 'eles serão descartados'} deste aparelho.`
+      : 'Você precisará entrar novamente com e-mail e senha.';
+    const ok = await confirmar('Sair do VINSight', mensagem, aguardando ? 'Sair e descartar' : 'Sair');
     if (!ok) return;
     setSaindo(true);
+    await descartarTodos(); // registros pendentes têm dados de clientes: não ficam no aparelho após o logout
     await sair(); // limpa o SecureStore; a rota protegida leva ao login
   }
 
   return (
     <Tela rolavel>
+      <Texto variante="rotulo" cor="textoSuave" style={estilos.tituloGrupo}>
+        Hoje, neste aparelho
+      </Texto>
+      <View style={estilos.contadores}>
+        <Contador icone="chatbubbles" valor={registrados} rotulo="Contatos registrados" />
+        <Contador icone="calendar" valor={contadores.AGENDADO ?? 0} rotulo="Agendamentos" />
+        <Contador icone="call" valor={contadores.SEM_SUCESSO ?? 0} rotulo="Não atenderam" />
+        <Contador icone="cloud-upload" valor={aguardando} rotulo="Aguardando envio" destaque={aguardando > 0} />
+      </View>
+
       <Cartao style={estilos.perfil}>
         <View style={estilos.avatar} accessibilityElementsHidden importantForAccessibility="no">
           <Texto variante="titulo2" cor="sobrePrimaria">
@@ -100,7 +119,24 @@ export default function Resumo() {
   );
 }
 
+function Contador({ icone, valor, rotulo, destaque }: { icone: NomeIcone; valor: number; rotulo: string; destaque?: boolean }) {
+  return (
+    <Cartao style={estilos.contador} accessibilityLabel={`${rotulo}: ${valor}`}>
+      <Ionicons name={icone} size={tamanho.icone.md} color={destaque ? cores.alerta : cores.primaria} />
+      <Texto variante="titulo1" cor={destaque ? 'alerta' : 'texto'}>
+        {valor}
+      </Texto>
+      <Texto variante="legenda" cor="textoSecundario">
+        {rotulo}
+      </Texto>
+    </Cartao>
+  );
+}
+
 const estilos = StyleSheet.create({
+  tituloGrupo: { marginBottom: espaco.sm },
+  contadores: { flexDirection: 'row', flexWrap: 'wrap', gap: espaco.md, marginBottom: espaco.xl },
+  contador: { flexBasis: '47%', flexGrow: 1, gap: espaco.xs, padding: espaco.md },
   perfil: { flexDirection: 'row', alignItems: 'center', gap: espaco.lg, marginBottom: espaco.md },
   avatar: {
     width: tamanho.icone.destaque,

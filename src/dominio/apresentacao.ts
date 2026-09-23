@@ -48,6 +48,15 @@ export const botaoDesfecho: Record<Exclude<StatusLead, 'OPEN'>, string> = {
   NUMERO_INVALIDO: 'Número errado',
 };
 
+/** O que acontece com o lead depois de cada desfecho (regra da API). */
+export const efeitoDesfecho: Record<Exclude<StatusLead, 'OPEN'>, { descricao: string; encerra: boolean }> = {
+  CONTATADO: { descricao: 'O lead continua aberto, em "Retornos", para o retorno combinado.', encerra: false },
+  SEM_SUCESSO: { descricao: 'O lead continua aberto, em "Não atenderam", para nova tentativa.', encerra: false },
+  AGENDADO: { descricao: 'Encerra o lead como convertido: o cliente volta à rede.', encerra: true },
+  RECUSADO: { descricao: 'Encerra o lead. O motivo ajuda o modelo a aprender.', encerra: true },
+  NUMERO_INVALIDO: { descricao: 'Encerra o lead e sinaliza o cadastro para correção.', encerra: true },
+};
+
 export const perfilComportamental: Record<PerfilComportamental, Apresentacao> = {
   FIEL: { rotulo: 'Fiel', tom: 'sucesso', icone: 'heart', descricao: 'Faz a manutenção na rede com regularidade' },
   ABANDONO: {

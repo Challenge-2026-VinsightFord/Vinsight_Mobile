@@ -3,6 +3,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { ProvedorSessao, useSessao } from '@/sessao/ProvedorSessao';
+import { ProvedorRegistros } from '@/sincronizacao/ProvedorRegistros';
 import { opcoesCabecalho } from '@/theme/navegacao';
 
 // Mantém a splash até sabermos se há sessão salva, para o login não "piscar" antes da fila.
@@ -11,8 +12,10 @@ SplashScreen.preventAutoHideAsync().catch(() => {});
 export default function LayoutRaiz() {
   return (
     <ProvedorSessao>
-      <StatusBar style="light" />
-      <Navegacao />
+      <ProvedorRegistros>
+        <StatusBar style="light" />
+        <Navegacao />
+      </ProvedorRegistros>
     </ProvedorSessao>
   );
 }
@@ -32,6 +35,7 @@ function Navegacao() {
       <Stack.Protected guard={autenticado}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="lead/[id]" options={{ title: 'Detalhe do lead', headerBackTitle: 'Fila' }} />
+        <Stack.Screen name="desfecho/[id]" options={{ title: 'Registrar contato', presentation: 'modal' }} />
         <Stack.Screen name="catalogo" options={{ title: 'Design system' }} />
       </Stack.Protected>
       <Stack.Protected guard={!autenticado}>

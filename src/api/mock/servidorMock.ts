@@ -1,3 +1,5 @@
+import NetInfo from '@react-native-community/netinfo';
+import { ErroApi } from '../erros';
 import { LATENCIA_MOCK_MS, MOCK_ACCESS_TTL_S, MOCK_REFRESH_TTL_S, PREFIXO_API } from '../config';
 import type { RequisicaoTransporte, RespostaTransporte, Transporte } from '../http';
 import type {
@@ -402,6 +404,11 @@ function lerQuery(texto: string): Query {
 const esperar = (ms: number) => new Promise((resolver) => setTimeout(resolver, ms));
 
 export const transporteMock: Transporte = async (req: RequisicaoTransporte): Promise<RespostaTransporte> => {
+  // O mock roda dentro do app, mas imita a rede: em modo avião falha como a API real falharia.
+  // Assim a demonstração de "sem conexão" e do reenvio de pendentes funciona também em modo mock.
+  if ((await NetInfo.fetch()).isConnected === false) {
+    throw ErroApi.local('sem-conexao', 'Sem conexão com o servidor. Verifique a internet e tente novamente.');
+  }
   await esperar(LATENCIA_MOCK_MS * (0.6 + Math.random() * 0.8));
 
   const [caminhoCompleto, textoQuery = ''] = req.caminho.split('?');

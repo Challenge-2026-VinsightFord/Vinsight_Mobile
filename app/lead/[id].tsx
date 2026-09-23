@@ -1,10 +1,13 @@
-import { Stack, useLocalSearchParams } from 'expo-router';
+import { router, Stack, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { RefreshControl, ScrollView, StyleSheet, View } from 'react-native';
-import { clientesApi, leadsApi, veiculosApi } from '@/api';
-import { ErroEmLinha, EstadoErro, Esqueleto, Secao, Tela, CartaoLeadEsqueleto } from '@/components';
-import type { NomeIcone } from '@/dominio/apresentacao';
+import { clientesApi, leadsApi, veiculosApi, type DetalheLead } from '@/api';
+import { Aviso, Botao, CartaoLeadEsqueleto, ErroEmLinha, EstadoErro, Esqueleto, Secao, Tela } from '@/components';
+import { efeitoDesfecho, statusLead, type NomeIcone } from '@/dominio/apresentacao';
+import { formatarPlaca } from '@/dominio/formatos';
 import { useRecurso } from '@/hooks/useRecurso';
+import { AvisosRegistro } from '@/sincronizacao/AvisosRegistro';
+import { useRegistros } from '@/sincronizacao/ProvedorRegistros';
 import { ResumoLead } from '@/telas/detalheLead/ResumoLead';
 import { SecaoCliente, SecaoContatosAnteriores } from '@/telas/detalheLead/SecaoCliente';
 import { SecaoContato } from '@/telas/detalheLead/SecaoContato';
@@ -26,6 +29,8 @@ export default function DetalheLeadTela() {
   const vin = params.vin || lead.dados?.vin;
   const cliente = useRecurso(clienteId, () => clientesApi.visao360(clienteId!));
   const veiculo = useRecurso(vin, () => veiculosApi.passaporte(vin!));
+
+  const { statusLocal } = useRegistros();
 
   const [atualizando, setAtualizando] = useState(false);
   async function atualizar() {
@@ -52,6 +57,9 @@ export default function DetalheLeadTela() {
     );
   }
 
+  // Um desfecho registrado neste aparelho (mesmo pendente de envio) vale como status atual.
+  const leadAtual: DetalheLead = { ...lead.dados, status: statusLocal[lead.dados.id] ?? lead.dados.status };
+
   return (
     <Tela semPadding>
       {titulo}
@@ -61,8 +69,9 @@ export default function DetalheLeadTela() {
           <RefreshControl refreshing={atualizando} onRefresh={atualizar} colors={[cores.primaria]} tintColor={cores.primaria} />
         }
       >
-        <ResumoLead lead={lead.dados} />
-        <SecaoContato lead={lead.dados} cliente={cliente.dados} carregandoCliente={cliente.carregando} />
+        <AvisosRegistro />
+        <ResumoLead lead={leadAtual} />
+        <SecaoContato lead={leadAtual} cliente={cliente.dados} carregandoCliente={cliente.carregando} />
 
         {veiculo.dados ? (
           <>
@@ -89,8 +98,43 @@ export default function DetalheLeadTela() {
 
         <SecaoContatosAnteriores lead={lead.dados} />
       </ScrollView>
+      <RodapeRegistro lead={leadAtual} />
     </Tela>
   );
+}
+
+/** Ação principal da tela: registrar o desfecho do contato, quando o lead ainda aceita. */
+function RodapeRegistro({ lead }: { lead: DetalheLead }) {
+  const { pendentes } = useRegistros();
+  const pendente = pendentes.some((p) => p.leadId === lead.id && !p.falha);
+
+  let conteudo;
+  if (lead.supressao) {
+    return null; // o aviso de LGPD já está na seção de contato
+  } else if (pendente) {
+    conteudo = <Aviso tom="alerta" icone="cloud-upload" mensagem="Registro deste lead aguardando conexão para envio." />;
+  } else if (lead.status !== 'OPEN' && efeitoDesfecho[lead.status].encerra) {
+    conteudo = <Aviso tom="neutro" icone={statusLead[lead.status].icone} mensagem={`Lead encerrado: ${statusLead[lead.status].rotulo.toLowerCase()}.`} />;
+  } else {
+    conteudo = (
+      <Botao
+        titulo="Registrar contato"
+        icone="create"
+        larguraTotal
+        onPress={() =>
+          router.push({
+            pathname: '/desfecho/[id]',
+            params: {
+              id: String(lead.id),
+              cliente: lead.cliente.nome,
+              veiculo: `${lead.veiculo.modelo} ${lead.veiculo.ano} · ${formatarPlaca(lead.placa)}`,
+            },
+          })
+        }
+      />
+    );
+  }
+  return <View style={estilos.rodape}>{conteudo}</View>;
 }
 
 function SecaoCarregando({ titulo, icone }: { titulo: string; icone: NomeIcone }) {
@@ -106,4 +150,10 @@ function SecaoCarregando({ titulo, icone }: { titulo: string; icone: NomeIcone }
 const estilos = StyleSheet.create({
   conteudo: { padding: espaco.lg, paddingBottom: espaco.xxxl },
   pilha: { gap: espaco.lg },
+  rodape: {
+    padding: espaco.lg,
+    borderTopWidth: 1,
+    borderTopColor: cores.borda,
+    backgroundColor: cores.superficie,
+  },
 });

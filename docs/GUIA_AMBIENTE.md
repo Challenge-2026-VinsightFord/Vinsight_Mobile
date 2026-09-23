@@ -215,8 +215,20 @@ Momentos que valem a pena mostrar:
    O `<IP-do-PC>` é o que aparece no terminal do `npx expo start`, na linha "Metro waiting on exp://…".
 6. **Gerente → Ricardo → Ligar**: abre o discador com o número completo. Como consultor, o mesmo botão
    explica que o número é protegido.
-7. **Sem internet**: no emulador, arraste a barra de status para baixo e ligue o **modo avião** com a fila
-   aberta. Troque de filtro ou abra um lead: o app mostra "Sem conexão" com "Tentar novamente" e não fecha.
+7. **Registrar um desfecho**: no detalhe, toque em **Registrar contato**, escolha "Não atendeu", o retorno
+   "Amanhã" e registre. O app volta à fila com "Contato registrado", o lead sai da lista, e o
+   Resumo conta o contato.
+8. **Registro sem conexão (o ponto alto da US-48)**: abra um lead com internet, ligue o **modo avião**
+   (arraste a barra de status do emulador para baixo) e registre "Agendou". O app guarda o registro
+   ("1 registro aguardando envio") e o lead já sai da fila. Desligue o modo avião: o envio acontece
+   sozinho e o aviso some. A Idempotency-Key garante que o registro não duplica no servidor.
+9. **Sem internet na fila**: com o modo avião ligado, troque de filtro ou abra um lead. O app mostra
+   "Sem conexão" com "Tentar novamente" e não fecha.
+
+> **Atenção ao gravar com a API real:** registrar um desfecho **altera o banco**, e um lead encerrado
+> (Agendou, Não tem interesse, Número errado) não volta para a fila. Para regravar uma cena, restaure o
+> seed: no MySQL, rode `DROP DATABASE vinsight;` e reinicie a API (o Flyway recria o banco com os dados
+> de demonstração). No **modo mock**, basta recarregar o app (`r` no terminal do Expo).
 
 ---
 

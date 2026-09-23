@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { router, useFocusEffect } from 'expo-router';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ActivityIndicator, FlatList, RefreshControl, ScrollView, StyleSheet, View } from 'react-native';
 import type { FaixaRisco, ItemFila, StatusLead } from '@/api';
 import {
@@ -20,6 +20,8 @@ import { faixaRisco } from '@/dominio/apresentacao';
 import { primeiroNome } from '@/dominio/formatos';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useFilaLeads } from '@/hooks/useFilaLeads';
+import { AvisosRegistro } from '@/sincronizacao/AvisosRegistro';
+import { useRegistros } from '@/sincronizacao/ProvedorRegistros';
 import { useUsuario } from '@/sessao/ProvedorSessao';
 import { cores, espaco, tamanho } from '@/theme';
 
@@ -75,9 +77,30 @@ export default function Fila() {
     if (termo && temMais && !carregandoMais && !erroMais) carregarMais();
   }, [termo, temMais, carregandoMais, erroMais, carregarMais]);
 
-  const visiveis = useMemo(
-    () => (termo ? fila.itens.filter((l) => corresponde(l, termo)) : fila.itens),
-    [fila.itens, termo],
+  // Lead com desfecho registrado neste aparelho sai da lista na hora, mesmo que o envio esteja
+  // pendente: ele mudou de status e não pertence mais a este filtro.
+  const { statusLocal, versao } = useRegistros();
+  const mudouDeStatus = useCallback(
+    (l: ItemFila) => statusLocal[l.id] !== undefined && statusLocal[l.id] !== l.status,
+    [statusLocal],
+  );
+  const ocultos = useMemo(() => fila.itens.filter(mudouDeStatus).length, [fila.itens, mudouDeStatus]);
+  const total = Math.max(0, fila.total - ocultos);
+
+  const visiveis = useMemo(() => {
+    const ativos = fila.itens.filter((l) => !mudouDeStatus(l));
+    return termo ? ativos.filter((l) => corresponde(l, termo)) : ativos;
+  }, [fila.itens, termo, mudouDeStatus]);
+
+  // Registro confirmado pela API (aqui ou em outra tela): recarrega a fila ao voltar para ela.
+  const versaoVista = useRef(versao);
+  const { atualizar } = fila;
+  useFocusEffect(
+    useCallback(() => {
+      if (versaoVista.current === versao) return;
+      versaoVista.current = versao;
+      atualizar();
+    }, [versao, atualizar]),
   );
 
   const abrirLead = useCallback((lead: ItemFila) => {
@@ -99,9 +122,9 @@ export default function Fila() {
         <Texto variante="corpo" cor="textoSecundario">
           {usuario.concessionaria ? `${usuario.concessionaria.nome} · ` : ''}
           <Texto variante="corpoForte" cor="primaria">
-            {fila.total}
+            {total}
           </Texto>{' '}
-          {fila.total === 1 ? singular : plural}
+          {total === 1 ? singular : plural}
           {risco ? ` (${faixaRisco[risco].rotulo.toLowerCase()})` : ''}
         </Texto>
       )}
@@ -111,6 +134,7 @@ export default function Fila() {
           Ordenada pelo score de evasão da IA
         </Texto>
       </View>
+      <AvisosRegistro />
       {fila.erroAtualizacao != null && (
         <Aviso tom="alerta" mensagem="Não foi possível atualizar a fila. Mostrando a última versão carregada." />
       )}
@@ -175,7 +199,7 @@ export default function Fila() {
     if (fila.fase === 'pronto' && !fila.temMais && visiveis.length > 0) {
       return (
         <Texto variante="legenda" cor="textoSuave" alinhamento="center" style={estilos.fim}>
-          {termo ? `${visiveis.length} de ${fila.total} leads` : 'Fim da fila'}
+          {termo ? `${visiveis.length} de ${total} leads` : 'Fim da fila'}
         </Texto>
       );
     }
