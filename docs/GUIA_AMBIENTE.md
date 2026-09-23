@@ -17,7 +17,7 @@ Passo a passo para rodar **API + app** num PC novo (ex.: em casa) e gravar a dem
 | JDK **21** | rodar a API | só se usar a API | 190 MB |
 | MySQL **8** | banco da API | só se usar a API | 300 MB a 450 MB |
 | Android Studio | emulador Android | **não** (ver seção 5) | ver abaixo |
-| scrcpy | espelhar o celular no PC para o OBS | recomendado para gravar | 40 MB |
+| scrcpy | espelhar um celular Android no PC para o OBS | só se tiver Android | 40 MB |
 
 ### Quanto pesa o Android Studio
 
@@ -46,8 +46,7 @@ O emulador também exige **virtualização ligada na BIOS** (Intel VT-x ou AMD-V
 Android Studio configura a parte do Windows sozinho.
 
 **Não é preciso ter o Android Studio para gerar o APK:** o build da US-49 roda na nuvem da Expo (EAS Build).
-Ele só serve para o emulador. Se você tem um Android, o caminho mais leve e mais bonito no vídeo é
-**celular real + scrcpy** (seção 5.2).
+Ele só serve para o emulador, que é o caminho para gravar sem um Android físico (seção 5.2).
 
 ---
 
@@ -148,34 +147,44 @@ Se não conectar:
   **Atenção:** o túnel leva só o app até o celular, não a API. Com túnel, use o modo mock ou
   defina `EXPO_PUBLIC_API_URL` com um endereço que o celular alcance.
 
-### 5.2 Celular + scrcpy (recomendado para gravar)
+### 5.2 Emulador do Android Studio + OBS (recomendado para gravar)
 
-O [scrcpy](https://github.com/Genymobile/scrcpy) mostra a tela do celular numa janela do PC, pelo cabo USB,
-e o OBS captura essa janela. É leve, a imagem é nítida e o app roda num aparelho de verdade.
+**Criar o aparelho virtual (uma vez só):**
 
-1. No celular, ative **Opções do desenvolvedor**: toque 7 vezes em *Sobre o telefone → Número da versão*.
-   Depois ative **Depuração USB**.
-2. Baixe o zip do scrcpy para Windows (página *Releases* do GitHub), extraia e conecte o celular pelo cabo.
-3. Rode:
-   ```bash
-   scrcpy --max-size 1080 --stay-awake --show-touches
+1. Instale o Android Studio e siga o assistente padrão; ele baixa o SDK e o emulador.
+2. Na tela inicial, abra **More Actions → Virtual Device Manager → Create Virtual Device**.
+3. Escolha um **Pixel 8**, com a imagem **Google Play**, **x86_64**, API 35 ou mais nova.
+4. Em *Advanced Settings*, deixe *Graphics* em **Hardware** e a RAM em **4 GB**, se o PC tiver 16 GB.
+
+**Rodar o app no emulador:**
+
+1. Inicie o emulador, de preferência **sem a IDE aberta**, o que economiza de 1,5 GB a 3 GB de RAM. No PowerShell (terminal padrão do VS Code):
+   ```powershell
+   & "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -list-avds
+   & "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -avd Pixel_8
    ```
-   O `--show-touches` desenha os toques na tela, o que ajuda quem assiste ao vídeo.
-4. No OBS: **Fontes → + → Captura de janela →** a janela do scrcpy.
+   Use o nome que o `-list-avds` mostrar. Se preferir iniciar pela IDE, desmarque
+   *Settings → Tools → Emulator → Launch in the tool window*, para o emulador abrir em janela própria.
+2. Com o emulador aberto, rode `npx expo start` e aperte **`a`**. O Expo instala o Expo Go no emulador
+   e abre o app. O endereço da API é detectado sozinho, como no celular.
 
-### 5.3 Emulador do Android Studio
+**Preparar para a gravação:**
 
-1. Instale o Android Studio e abra **More Actions → Virtual Device Manager**.
-2. Crie um aparelho, por exemplo um Pixel 8, com uma imagem **Google Play**, **x86_64**, API 35 ou mais nova.
-3. Inicie o emulador. Com ele aberto, rode `npx expo start` e aperte **`a`**: o Expo instala o Expo Go no
-   emulador e abre o app.
-4. **Para economizar memória:** o emulador pode ser iniciado sem abrir a IDE:
-   ```bash
-   "%LOCALAPPDATA%\Android\Sdk\emulator\emulator.exe" -list-avds
-   "%LOCALAPPDATA%\Android\Sdk\emulator\emulator.exe" -avd Pixel_8
-   ```
-   Se preferir iniciar pela IDE, desmarque *Settings → Tools → Emulator → Launch in the tool window*.
-   Assim o emulador abre em janela própria, que o OBS captura com mais facilidade.
+1. **Mostrar os toques:** no emulador, ative *Configurações → Sobre o emulador → Número da versão*
+   (toque 7 vezes) e depois *Opções do desenvolvedor → Mostrar toques*. Aparece um círculo onde você
+   clica, o que ajuda quem assiste.
+2. **OBS:** *Fontes → + → Captura de janela →* a janela "Android Emulator - Pixel_8…".
+   Se a captura ficar **preta**, troque o *Método de captura* para **Windows 10 (1903 e superior)**:
+   o emulador desenha pela GPU e o método antigo não enxerga.
+3. Esconda a barra lateral de controles do emulador ou recorte-a no OBS (*Alt + arrastar a borda*).
+4. Faça um "ensaio" antes: a primeira abertura do app no emulador é mais lenta (o Metro gera o bundle).
+   Na segunda, abre rápido.
+
+### 5.3 Se tiver um celular Android: scrcpy
+
+O [scrcpy](https://github.com/Genymobile/scrcpy) mostra a tela do celular numa janela do PC, pelo cabo USB.
+Ative a *Depuração USB* nas opções do desenvolvedor do celular e rode
+`scrcpy --max-size 1080 --stay-awake --show-touches`. O OBS captura a janela do scrcpy.
 
 ---
 
@@ -198,16 +207,16 @@ Momentos que valem a pena mostrar:
    Mostre também a linha do tempo, a telemetria e a aderência à rede.
 4. **Detalhe da Luciana Mendes**: 4 de 4 serviços em oficina independente e código de falha P0420.
 5. **LGPD**: o lead da Camila Freitas (id 13) está suprimido e os botões de contato ficam bloqueados.
-   A API esconde leads suprimidos da fila, então ele só abre por link direto. Com o app logado e o
-   celular no USB, use o `adb`, que vem no zip do scrcpy:
-   ```bash
-   adb shell am start -a android.intent.action.VIEW -d "exp://<IP-do-PC>:8081/--/lead/13"
+   A API esconde leads suprimidos da fila, então ele só abre por link direto. Com o app logado no
+   emulador, rode no PowerShell do PC (o `adb` vem com o Android Studio):
+   ```powershell
+   & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" shell am start -a android.intent.action.VIEW -d "exp://<IP-do-PC>:8081/--/lead/13"
    ```
-   No emulador, o IP é o mesmo que aparece no QR code do `npx expo start`.
+   O `<IP-do-PC>` é o que aparece no terminal do `npx expo start`, na linha "Metro waiting on exp://…".
 6. **Gerente → Ricardo → Ligar**: abre o discador com o número completo. Como consultor, o mesmo botão
    explica que o número é protegido.
-7. **Sem internet**: ligue o modo avião com a fila aberta e puxe para atualizar. O app mostra o aviso
-   e não fecha.
+7. **Sem internet**: no emulador, arraste a barra de status para baixo e ligue o **modo avião** com a fila
+   aberta. Troque de filtro ou abra um lead: o app mostra "Sem conexão" com "Tentar novamente" e não fecha.
 
 ---
 
@@ -215,7 +224,7 @@ Momentos que valem a pena mostrar:
 
 | Sintoma | Causa provável | Solução |
 |---|---|---|
-| Login dá "Não foi possível falar com o servidor" | API fora do ar ou firewall | Veja `/actuator/health` no navegador **do celular**: `http://<IP-do-PC>:8080/actuator/health` |
+| Login dá "Não foi possível falar com o servidor" | API fora do ar ou firewall | Abra `http://<IP-do-PC>:8080/actuator/health` no Chrome **do emulador** (ou do celular); se não abrir, é rede ou firewall |
 | Expo Go diz que o projeto é de outro SDK | Expo Go desatualizado | Atualize o Expo Go na Play Store |
 | Mudei o `.env.local` e nada mudou | O Metro lê o `.env` só ao iniciar | Pare e rode `npx expo start --clear` |
 | Emulador muito lento | Virtualização desligada ou pouca RAM | Ative VT-x/AMD-V na BIOS; feche o Android Studio e use o emulador pela linha de comando |
