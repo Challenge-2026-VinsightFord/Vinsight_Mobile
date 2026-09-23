@@ -146,7 +146,7 @@ type Handler = (ctx: Contexto) => RespostaTransporte;
 const semAcento = (s: string) =>
   s
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase();
 
 const paraItemFila = ({ ultimoContatoEm: _u, supressao: _s, desfechos: _d, ...item }: DetalheLead): ItemFila => item;

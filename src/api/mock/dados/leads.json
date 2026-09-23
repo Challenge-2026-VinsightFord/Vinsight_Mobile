@@ -298,5 +298,89 @@
     "ultimoContatoEm": null,
     "supressao": null,
     "desfechos": []
+  },
+  {
+    "id": 6,
+    "vin": "9BFPPDCN0WNL6F676",
+    "placa": "JZY6N82",
+    "status": "OPEN",
+    "score": 0.34,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 40.000 km vencida ha 143 dias",
+    "acaoRecomendada": "Oferecer pacote de revisao com desconto de fidelidade",
+    "perfilComportamental": "ESQUECIDO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 5,
+      "nome": "Rafael Antunes",
+      "telefoneMascarado": "(11) *****-1605"
+    },
+    "veiculo": {
+      "modelo": "Ka",
+      "versao": "SE 1.0",
+      "ano": 2025
+    },
+    "ultimoContatoEm": null,
+    "supressao": {
+      "motivo": "LGPD_OPT_OUT",
+      "em": "2026-09-22T11:00:00Z"
+    },
+    "desfechos": []
+  },
+  {
+    "id": 13,
+    "vin": "9BFNFR521M8R9GGW4",
+    "placa": "TMW4M28",
+    "status": "OPEN",
+    "score": 0.87,
+    "faixaRisco": "ALTO",
+    "motivoContato": "Revisao de 40.000 km vencida ha 127 dias",
+    "acaoRecomendada": "Oferecer pacote de revisao com desconto de fidelidade",
+    "perfilComportamental": "ESQUECIDO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 12,
+      "nome": "Camila Freitas",
+      "telefoneMascarado": "(11) *****-1852"
+    },
+    "veiculo": {
+      "modelo": "Ka",
+      "versao": "SE 1.0",
+      "ano": 2025
+    },
+    "ultimoContatoEm": null,
+    "supressao": {
+      "motivo": "LGPD_OPT_OUT",
+      "em": "2026-09-22T11:00:00Z"
+    },
+    "desfechos": []
+  },
+  {
+    "id": 14,
+    "vin": "9BFXT2WTVLHWT09F5",
+    "placa": "SHP5M55",
+    "status": "CONTATADO",
+    "score": 0.2,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 75.000 km prevista para 2026-12-11",
+    "acaoRecomendada": "Apresentar linha de pecas Motorcraft com preco competitivo",
+    "perfilComportamental": "ECONOMICO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 12,
+      "nome": "Camila Freitas",
+      "telefoneMascarado": "(11) *****-1852"
+    },
+    "veiculo": {
+      "modelo": "EcoSport",
+      "versao": "Freestyle 1.5",
+      "ano": 2026
+    },
+    "ultimoContatoEm": null,
+    "supressao": {
+      "motivo": "LGPD_OPT_OUT",
+      "em": "2026-09-22T11:00:00Z"
+    },
+    "desfechos": []
   }
 ]

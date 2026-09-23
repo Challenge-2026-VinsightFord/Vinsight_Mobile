@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { comoErroApi, type ErroApi } from '@/api';
 import type { NomeIcone } from '@/dominio/apresentacao';
 import { cores, espaco, raio, tamanho, tons, type Tom } from '@/theme';
+import { Aviso } from './Aviso';
 import { Botao } from './Botao';
 import { Texto } from './Texto';
 
@@ -146,7 +147,21 @@ export function EstadoErro({ erro, onTentarNovamente }: EstadoErroProps) {
   );
 }
 
+/** Versão compacta do erro, para uma seção que falhou dentro de uma tela que carregou. */
+export function ErroEmLinha({ erro, onTentarNovamente }: EstadoErroProps) {
+  const { titulo, mensagem, podeRepetir } = descreverErro(comoErroApi(erro));
+  return (
+    <View style={estilos.emLinha}>
+      <Aviso tom="alerta" titulo={titulo} mensagem={mensagem ?? ''} />
+      {podeRepetir && onTentarNovamente && (
+        <Botao titulo="Tentar de novo" icone="refresh" variante="fantasma" compacto onPress={onTentarNovamente} />
+      )}
+    </View>
+  );
+}
+
 const estilos = StyleSheet.create({
+  emLinha: { gap: espaco.xs, alignItems: 'flex-start' },
   centro: {
     flexGrow: 1,
     alignItems: 'center',

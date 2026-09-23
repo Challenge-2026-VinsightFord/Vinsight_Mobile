@@ -33,4 +33,15 @@ export function formatarDataHora(iso: string | null | undefined) {
 export const formatarPlaca = (placa: string) =>
   placa.length === 7 ? `${placa.slice(0, 3)}-${placa.slice(3)}` : placa;
 
+/**
+ * "11910025926" → "(11) 91002-5926". Valores já mascarados pela API ("(11) *****-4321")
+ * ou fora do padrão passam intactos.
+ */
+export function formatarTelefone(telefone: string | null | undefined) {
+  if (!telefone) return '—';
+  const d = telefone.replace(/\D/g, '');
+  if (telefone.includes('*') || (d.length !== 10 && d.length !== 11)) return telefone;
+  return `(${d.slice(0, 2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}`;
+}
+
 export const primeiroNome = (nome: string) => nome.trim().split(/\s+/)[0];

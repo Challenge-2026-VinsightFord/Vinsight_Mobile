@@ -67,6 +67,19 @@ async function main() {
   const leads = [];
   for (const item of fila) leads.push(await chamar(`/api/v1/leads/${item.id}`, { token }));
 
+  // Leads suprimidos (LGPD) não vêm na listagem, mas o detalhe abre: são o caso de teste dos
+  // botões de contato bloqueados. Sondamos os ids que faltam na sequência.
+  const ids = new Set(fila.map((l) => l.id));
+  for (let id = 1; id <= Math.max(...ids) + 10; id++) {
+    if (ids.has(id)) continue;
+    try {
+      const lead = await chamar(`/api/v1/leads/${id}`, { token });
+      if (lead.supressao) leads.push(lead);
+    } catch {
+      // 404 (não existe) ou 403 (outra concessionária): fora do mock
+    }
+  }
+
   const clientesResumo = await todasAsPaginas('/api/v1/customers', token);
   const clientes = {};
   for (const c of clientesResumo) clientes[c.id] = await chamar(`/api/v1/customers/${c.id}/overview`, { token });

@@ -820,78 +820,6 @@
       }
     ]
   },
-  "9BFCYFCZVYW2CPYF8": {
-    "id": 8,
-    "vin": "9BFCYFCZVYW2CPYF8",
-    "placa": "FXG8L46",
-    "modelo": "Ranger",
-    "versao": "XLT 3.2 Diesel",
-    "ano": 2019,
-    "cor": "Branco",
-    "quilometragemEstimada": 41096,
-    "garantia": {
-      "status": "ENCERRADA",
-      "dataLimite": "2021-05-24",
-      "mesesRestantes": 0
-    },
-    "proximaRevisaoPrevista": {
-      "km": 80000,
-      "dataEstimada": "2026-03-17",
-      "situacao": "VENCIDA"
-    },
-    "aderenciaRede": 1,
-    "ultimaTelemetria": {
-      "recebidaEm": "2026-09-15T01:10:00Z",
-      "codigosFalha": []
-    },
-    "historico": [
-      {
-        "id": 29,
-        "data": "2026-03-12",
-        "tipoServico": "RECALL",
-        "descricao": "Campanha de recall - airbag",
-        "valor": 1209,
-        "concessionaria": "Ford Morumbi",
-        "naRede": true
-      },
-      {
-        "id": 30,
-        "data": "2025-09-13",
-        "tipoServico": "REVISAO_PROGRAMADA",
-        "descricao": "Revisao de 23.000 km",
-        "valor": 1262,
-        "concessionaria": "Ford Morumbi",
-        "naRede": true
-      },
-      {
-        "id": 31,
-        "data": "2025-03-17",
-        "tipoServico": "REPARO",
-        "descricao": "Reparo corretivo - suspensao dianteira",
-        "valor": 1565,
-        "concessionaria": "Ford Morumbi",
-        "naRede": true
-      },
-      {
-        "id": 32,
-        "data": "2024-09-18",
-        "tipoServico": "TROCA_OLEO",
-        "descricao": "Troca de oleo e filtros",
-        "valor": 1368,
-        "concessionaria": "Ford Morumbi",
-        "naRede": true
-      },
-      {
-        "id": 33,
-        "data": "2024-03-22",
-        "tipoServico": "GARANTIA",
-        "descricao": "Atendimento em garantia - modulo eletronico",
-        "valor": 1421,
-        "concessionaria": "Ford Morumbi",
-        "naRede": true
-      }
-    ]
-  },
   "9BFNFR521M8R9GGW4": {
     "id": 14,
     "vin": "9BFNFR521M8R9GGW4",
@@ -1014,6 +942,78 @@
         "valor": 1994,
         "concessionaria": null,
         "naRede": false
+      }
+    ]
+  },
+  "9BFCYFCZVYW2CPYF8": {
+    "id": 8,
+    "vin": "9BFCYFCZVYW2CPYF8",
+    "placa": "FXG8L46",
+    "modelo": "Ranger",
+    "versao": "XLT 3.2 Diesel",
+    "ano": 2019,
+    "cor": "Branco",
+    "quilometragemEstimada": 41096,
+    "garantia": {
+      "status": "ENCERRADA",
+      "dataLimite": "2021-05-24",
+      "mesesRestantes": 0
+    },
+    "proximaRevisaoPrevista": {
+      "km": 80000,
+      "dataEstimada": "2026-03-17",
+      "situacao": "VENCIDA"
+    },
+    "aderenciaRede": 1,
+    "ultimaTelemetria": {
+      "recebidaEm": "2026-09-15T01:10:00Z",
+      "codigosFalha": []
+    },
+    "historico": [
+      {
+        "id": 29,
+        "data": "2026-03-12",
+        "tipoServico": "RECALL",
+        "descricao": "Campanha de recall - airbag",
+        "valor": 1209,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 30,
+        "data": "2025-09-13",
+        "tipoServico": "REVISAO_PROGRAMADA",
+        "descricao": "Revisao de 23.000 km",
+        "valor": 1262,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 31,
+        "data": "2025-03-17",
+        "tipoServico": "REPARO",
+        "descricao": "Reparo corretivo - suspensao dianteira",
+        "valor": 1565,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 32,
+        "data": "2024-09-18",
+        "tipoServico": "TROCA_OLEO",
+        "descricao": "Troca de oleo e filtros",
+        "valor": 1368,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
+      },
+      {
+        "id": 33,
+        "data": "2024-03-22",
+        "tipoServico": "GARANTIA",
+        "descricao": "Atendimento em garantia - modulo eletronico",
+        "valor": 1421,
+        "concessionaria": "Ford Morumbi",
+        "naRede": true
       }
     ]
   },

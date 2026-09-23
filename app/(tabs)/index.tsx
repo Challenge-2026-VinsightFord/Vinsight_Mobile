@@ -44,7 +44,7 @@ const DESCRICAO_TOTAL: Record<StatusFila, [string, string]> = {
 const normalizar = (s: string) =>
   s
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase();
 
 /** Busca por nome do cliente, placa (com ou sem hífen), modelo ou VIN. */
@@ -81,7 +81,11 @@ export default function Fila() {
   );
 
   const abrirLead = useCallback((lead: ItemFila) => {
-    router.push({ pathname: '/lead/[id]', params: { id: String(lead.id) } });
+    router.push({
+      pathname: '/lead/[id]',
+      // clienteId e vin deixam o detalhe buscar lead, cliente e veículo em paralelo.
+      params: { id: String(lead.id), clienteId: String(lead.cliente.id), vin: lead.vin },
+    });
   }, []);
 
   const [singular, plural] = DESCRICAO_TOTAL[status];
