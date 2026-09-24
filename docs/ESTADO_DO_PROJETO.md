@@ -2,7 +2,7 @@
 
 > Documento de passagem entre sessões e computadores. Anexe-o num chat novo junto com
 > `CONTEXTO_Mobile_Expo.md` e `INTEGRACAO_MOBILE.md` para retomar sem perder contexto.
-> Atualizado em **23/09/2026**. Entrega da Sprint 3: **27/09/2026**.
+> Atualizado em **24/09/2026**. Entrega da Sprint 3: **27/09/2026**.
 
 ## Histórias
 
@@ -13,7 +13,7 @@
 | US-46 | Fila de leads: score, filtros, busca, paginação, estados | ✅ Feita | `feat/us-46-fila-leads` |
 | US-47 | Detalhe do lead (visão 360°), contato conforme LGPD | ✅ Feita | `feat/us-47-detalhe-lead` |
 | US-48 | Registro de desfecho com fila offline e reenvio idempotente | ✅ Feita | `feat/us-48-desfecho` |
-| **US-49** | **APK pelo EAS, ícone/splash, README com prints e link do APK** | ⏳ **Próxima — obrigatória** | — |
+| **US-49** | **APK, ícone/splash, README com prints e link do APK** | 🔧 **Em andamento (24/09)** | `feat/us-49-apk` |
 | US-60 | Agendamento pelo app (Should) | ⬜ Se sobrar tempo | — |
 | US-75 | Modo offline completo com cache (Could) | ⬜ Se sobrar tempo | — |
 
@@ -21,19 +21,25 @@ As branches são **empilhadas**: cada uma contém as anteriores. A mais recente 
 **Antes da entrega, levar tudo para a `main`** (pull request da branch mais recente → `main`): o
 avaliador olha a branch padrão do repositório. A versão do cliente (Ford Care+) está preservada na tag `v1`.
 
-## Plano da US-49 (combinado, ainda não iniciado)
+## US-49 — o que foi feito em 24/09
 
-1. `eas.json` com dois perfis de APK (`buildType: "apk"`):
-   - **entrega**: `EXPO_PUBLIC_USE_MOCK=true`. O professor não terá a API rodando; em mock o APK funciona
-     em qualquer aparelho com os dados reais do seed.
-   - **api**: `EXPO_PUBLIC_API_URL` apontando para a API, e `usesCleartextTraffic` liberado
-     (plugin `expo-build-properties`), porque o release bloqueia `http://`.
-2. Atalhos de usuários de demonstração do login controlados por variável (hoje dependem de `__DEV__`,
-   que é falso no APK).
-3. Ícone, ícone adaptativo e splash do VINSight (hoje ainda são os do Ford Care+) e `version` no `app.json`.
-4. Conta Expo **do usuário** + `npx eas-cli login`; depois `npx eas-cli build -p android --profile entrega`.
-   Alternativa sem conta: build local com o SDK do Android Studio (`npx expo run:android --variant release`).
-5. README final: descrição, arquitetura, como rodar, usuários de demo, **print de cada tela** e link do APK.
+- `eas.json` com os perfis `entrega` (mock) e `api`; `expo-build-properties` libera `http://` no release.
+- `EXPO_PUBLIC_ATALHOS_DEMO=true` mostra os usuários de demo no login do APK (antes dependia de `__DEV__`).
+- Ícones e splash do VINSight gerados por `scripts/gerar-icones.ps1`; `versionCode` 1.
+- README reescrito (era o do Ford Care+), com lugar para os prints em `docs/prints/`.
+- **Build local** com o SDK do Android Studio (sem conta Expo): `npx expo prebuild -p android` e
+  `gradlew assembleRelease` com `JAVA_HOME` no JBR do Android Studio. APK sem `EXPO_PUBLIC_API_URL`
+  procura a API em `10.0.2.2:8080` (o PC visto do emulador).
+- **Armadilha do build local:** o `@react-native/gradle-plugin` declara o `foojay-resolver-convention`
+  0.5.0, que quebra no Gradle 9.3 (`JvmVendorSpec IBM_SEMERU`). Troque para `1.0.0` em
+  `node_modules/@react-native/gradle-plugin/settings.gradle.kts` (volta a cada `npm install`).
+- **Outra armadilha:** o lint do release trava (bug do lint) em `react-native-screens` e `react-native-worklets`.
+  Rode o `assembleRelease` com `-x lintVitalAnalyzeRelease`.
+- **Mais uma:** o Gradle não percebe mudança nas `EXPO_PUBLIC_*` e reaproveita o bundle JS. Entre o APK da API
+  e o de demo, apague `android/app/build/generated/assets`. `react`/`react-dom` precisam ser **19.2.3** exatos
+  (o renderer do RN 0.85); com 19.2.6 o APK fecha ao abrir.
+
+Falta: prints de cada tela, publicar os APKs no GitHub Releases, vídeo, e levar a branch para a `main`.
 
 ## Decisões já tomadas
 

@@ -6,9 +6,11 @@ import { Platform } from 'react-native';
  *
  * Variáveis (arquivo `.env`, ou `.env.local` para sobrescrever na sua máquina):
  *   EXPO_PUBLIC_USE_MOCK=true    usa os JSONs de src/api/mock em vez da rede
- *   EXPO_PUBLIC_API_URL=http://192.168.0.10:8080   força a base URL (obrigatória no APK)
+ *   EXPO_PUBLIC_API_URL=http://192.168.0.10:8080   força a base URL (APK sem ela: 10.0.2.2, o PC visto do emulador)
  */
 export const USE_MOCK = process.env.EXPO_PUBLIC_USE_MOCK === 'true';
+/** Atalhos de login com os usuários do seed. Sempre no modo dev; no APK, só com EXPO_PUBLIC_ATALHOS_DEMO=true. */
+export const ATALHOS_DEMO = __DEV__ || process.env.EXPO_PUBLIC_ATALHOS_DEMO === 'true';
 
 export const API_URL = resolverApiUrl();
 export const PREFIXO_API = '/api/v1';

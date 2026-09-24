@@ -3,13 +3,13 @@ import Constants from 'expo-constants';
 import { useRef, useState } from 'react';
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View, type TextInput } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { API_URL, comoErroApi, USE_MOCK } from '@/api';
+import { API_URL, ATALHOS_DEMO, comoErroApi, USE_MOCK } from '@/api';
 import { Aviso, Botao, CampoTexto, Cartao, Chip, Texto } from '@/components';
 import { validarEmail, validarSenha } from '@/dominio/validacao';
 import { useSessao } from '@/sessao/ProvedorSessao';
 import { cores, espaco, raio, tamanho } from '@/theme';
 
-/** Usuários do seed do perfil dev, para agilizar testes. Só aparecem em modo desenvolvimento. */
+/** Usuários do seed do perfil dev, para agilizar testes e a demonstração (ver ATALHOS_DEMO). */
 const USUARIOS_DEMO = [
   { rotulo: 'Consultor Morumbi', email: 'consultor@ford.com.br', senha: 'consultor123' },
   { rotulo: 'Consultor POA', email: 'consultor.poa@ford.com.br', senha: 'consultor123' },
@@ -153,7 +153,7 @@ export default function Login() {
           <Botao titulo="Entrar" icone="log-in" onPress={enviar} carregando={enviando} larguraTotal />
         </Cartao>
 
-        {__DEV__ && (
+        {ATALHOS_DEMO && (
           <View style={estilos.demo}>
             <Texto variante="rotulo" cor="textoSuave">
               Usuários de demonstração {USE_MOCK ? '· mock' : '· API'}
