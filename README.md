@@ -16,7 +16,7 @@ cada contato, que realimenta o modelo.
 
 ## Download do APK
 
-**[Baixar o APK (Releases)](https://github.com/Junqueiraprr/mobile_fiap/releases/latest)**
+**[Baixar o APK (Releases)](https://github.com/Challenge-2026-VinsightFord/mobile_fiap/releases/latest)**
 
 | Arquivo | Para quê |
 |---|---|
