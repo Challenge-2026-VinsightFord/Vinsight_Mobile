@@ -1,0 +1,425 @@
+{
+  "1": {
+    "id": 1,
+    "nome": "Carlos Pereira",
+    "documentoMascarado": "***.222.334-**",
+    "telefoneMascarado": "(11) *****-4321",
+    "emailMascarado": "c****@email.com",
+    "canalPreferido": "EMAIL",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-02-02T17:22:00Z"
+    },
+    "ultimoNps": 7,
+    "veiculos": [
+      {
+        "vin": "9BF8313PF9WBWDX01",
+        "modelo": "Ranger",
+        "ano": 2020,
+        "placa": "WCD1Z37"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 5,
+      "ticketMedio": 737.6,
+      "ultimaVisita": "2026-08-20"
+    }
+  },
+  "2": {
+    "id": 2,
+    "nome": "Mariana Rocha",
+    "documentoMascarado": "***.222.335-**",
+    "telefoneMascarado": "(11) *****-8642",
+    "emailMascarado": "m****@email.com",
+    "canalPreferido": "TELEFONE",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "TELEFONE"
+      ],
+      "atualizadoEm": "2026-03-03T17:22:00Z"
+    },
+    "ultimoNps": 8,
+    "veiculos": [
+      {
+        "vin": "9BFT1S782CWZJG7X2",
+        "modelo": "Territory",
+        "ano": 2021,
+        "placa": "WFX2J64"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 5,
+      "ticketMedio": 783,
+      "ultimaVisita": "2026-02-28"
+    }
+  },
+  "3": {
+    "id": 3,
+    "nome": "Joao Batista",
+    "documentoMascarado": "***.222.337-**",
+    "telefoneMascarado": "(11) *****-2963",
+    "emailMascarado": "j****@email.com",
+    "canalPreferido": "WHATSAPP",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "WHATSAPP",
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-04-04T17:22:00Z"
+    },
+    "ultimoNps": 9,
+    "veiculos": [
+      {
+        "vin": "9BFRHMLMFR0P96DF3",
+        "modelo": "Bronco Sport",
+        "ano": 2022,
+        "placa": "FSM3V91"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 3,
+      "ticketMedio": 860.33,
+      "ultimaVisita": "2026-02-15"
+    }
+  },
+  "4": {
+    "id": 4,
+    "nome": "Patricia Gomes",
+    "documentoMascarado": "***.222.338-**",
+    "telefoneMascarado": "(11) *****-7284",
+    "emailMascarado": "p****@email.com",
+    "canalPreferido": "EMAIL",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-05-05T17:22:00Z"
+    },
+    "ultimoNps": null,
+    "veiculos": [
+      {
+        "vin": "9BFJKD4NL04BHG2Z4",
+        "modelo": "Maverick",
+        "ano": 2023,
+        "placa": "XBH4G28"
+      },
+      {
+        "vin": "9BFC05GG9JY36J9B5",
+        "modelo": "Mustang Mach-E",
+        "ano": 2024,
+        "placa": "LFX5V55"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 9,
+      "ticketMedio": 1024.67,
+      "ultimaVisita": "2026-02-02"
+    }
+  },
+  "5": {
+    "id": 5,
+    "nome": "Rafael Antunes",
+    "documentoMascarado": "***.222.339-**",
+    "telefoneMascarado": "(11) *****-1605",
+    "emailMascarado": "r****@email.com",
+    "canalPreferido": "TELEFONE",
+    "consentimento": {
+      "ativo": false,
+      "canais": [],
+      "atualizadoEm": "2026-06-06T17:22:00Z"
+    },
+    "ultimoNps": 6,
+    "veiculos": [
+      {
+        "vin": "9BFPPDCN0WNL6F676",
+        "modelo": "Ka",
+        "ano": 2025,
+        "placa": "JZY6N82"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 3,
+      "ticketMedio": 1068,
+      "ultimaVisita": "2026-01-07"
+    }
+  },
+  "6": {
+    "id": 6,
+    "nome": "Luciana Mendes",
+    "documentoMascarado": "***.222.341-**",
+    "telefoneMascarado": "(11) *****-5926",
+    "emailMascarado": "l****@email.com",
+    "canalPreferido": "WHATSAPP",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "WHATSAPP",
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-07-07T17:22:00Z"
+    },
+    "ultimoNps": 7,
+    "veiculos": [
+      {
+        "vin": "9BFB384GY4WZJDPH7",
+        "modelo": "EcoSport",
+        "ano": 2026,
+        "placa": "WLJ7R19"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 4,
+      "ticketMedio": 1254,
+      "ultimaVisita": "2026-03-25"
+    }
+  },
+  "7": {
+    "id": 7,
+    "nome": "Paulo Cesar Silva",
+    "documentoMascarado": "***.222.342-**",
+    "telefoneMascarado": "(11) *****-0247",
+    "emailMascarado": "p****@email.com",
+    "canalPreferido": "EMAIL",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-08-08T17:22:00Z"
+    },
+    "ultimoNps": 8,
+    "veiculos": [
+      {
+        "vin": "9BFCYFCZVYW2CPYF8",
+        "modelo": "Ranger",
+        "ano": 2019,
+        "placa": "FXG8L46"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 5,
+      "ticketMedio": 1365,
+      "ultimaVisita": "2026-03-12"
+    }
+  },
+  "8": {
+    "id": 8,
+    "nome": "Beatriz Carvalho",
+    "documentoMascarado": "***.222.343-**",
+    "telefoneMascarado": "(11) *****-4568",
+    "emailMascarado": "b****@email.com",
+    "canalPreferido": "TELEFONE",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "TELEFONE"
+      ],
+      "atualizadoEm": "2026-09-09T17:22:00Z"
+    },
+    "ultimoNps": null,
+    "veiculos": [
+      {
+        "vin": "9BF2NPNC4S1X1FCW9",
+        "modelo": "Ranger",
+        "ano": 2020,
+        "placa": "GCL9G73"
+      },
+      {
+        "vin": "9BFTD9B1FS40TRG00",
+        "modelo": "Territory",
+        "ano": 2021,
+        "placa": "FNP0C00"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 7,
+      "ticketMedio": 1501,
+      "ultimaVisita": "2026-02-27"
+    }
+  },
+  "9": {
+    "id": 9,
+    "nome": "Marcos Vinicius",
+    "documentoMascarado": "***.222.345-**",
+    "telefoneMascarado": "(11) *****-8889",
+    "emailMascarado": "m****@email.com",
+    "canalPreferido": "WHATSAPP",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "WHATSAPP",
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-01-10T17:22:00Z"
+    },
+    "ultimoNps": 10,
+    "veiculos": [
+      {
+        "vin": "9BF60R6786867X7T1",
+        "modelo": "Bronco Sport",
+        "ano": 2022,
+        "placa": "TYW1T37"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 5,
+      "ticketMedio": 1656,
+      "ultimaVisita": "2026-02-01"
+    }
+  },
+  "10": {
+    "id": 10,
+    "nome": "Juliana Prado",
+    "documentoMascarado": "***.222.346-**",
+    "telefoneMascarado": "(11) *****-3210",
+    "emailMascarado": "j****@email.com",
+    "canalPreferido": "EMAIL",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-02-11T17:22:00Z"
+    },
+    "ultimoNps": 6,
+    "veiculos": [
+      {
+        "vin": "9BFSKSX7MLBPT9272",
+        "modelo": "Maverick",
+        "ano": 2023,
+        "placa": "CCK2C64"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 3,
+      "ticketMedio": 1650,
+      "ultimaVisita": "2026-01-19"
+    }
+  },
+  "11": {
+    "id": 11,
+    "nome": "Ricardo Tavares",
+    "documentoMascarado": "***.222.348-**",
+    "telefoneMascarado": "(11) *****-7531",
+    "emailMascarado": "r****@email.com",
+    "canalPreferido": "TELEFONE",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "TELEFONE"
+      ],
+      "atualizadoEm": "2026-03-12T17:22:00Z"
+    },
+    "ultimoNps": 7,
+    "veiculos": [
+      {
+        "vin": "9BFHFX2N86KR4JYW3",
+        "modelo": "Mustang Mach-E",
+        "ano": 2024,
+        "placa": "BRL3K91"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 4,
+      "ticketMedio": 1836,
+      "ultimaVisita": "2026-01-06"
+    }
+  },
+  "12": {
+    "id": 12,
+    "nome": "Camila Freitas",
+    "documentoMascarado": "***.222.349-**",
+    "telefoneMascarado": "(11) *****-1852",
+    "emailMascarado": "c****@email.com",
+    "canalPreferido": "WHATSAPP",
+    "consentimento": {
+      "ativo": false,
+      "canais": [],
+      "atualizadoEm": "2026-04-13T17:22:00Z"
+    },
+    "ultimoNps": null,
+    "veiculos": [
+      {
+        "vin": "9BFNFR521M8R9GGW4",
+        "modelo": "Ka",
+        "ano": 2025,
+        "placa": "TMW4M28"
+      },
+      {
+        "vin": "9BFXT2WTVLHWT09F5",
+        "modelo": "EcoSport",
+        "ano": 2026,
+        "placa": "SHP5M55"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 8,
+      "ticketMedio": 1976,
+      "ultimaVisita": "2026-03-24"
+    }
+  },
+  "13": {
+    "id": 13,
+    "nome": "Anderson Luz",
+    "documentoMascarado": "***.222.350-**",
+    "telefoneMascarado": "(11) *****-6173",
+    "emailMascarado": "a****@email.com",
+    "canalPreferido": "EMAIL",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "EMAIL"
+      ],
+      "atualizadoEm": "2026-05-14T17:22:00Z"
+    },
+    "ultimoNps": 9,
+    "veiculos": [
+      {
+        "vin": "9BF28PJXK1WLZ5S16",
+        "modelo": "Ranger",
+        "ano": 2019,
+        "placa": "TPZ6Z82"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 4,
+      "ticketMedio": 2064.5,
+      "ultimaVisita": "2026-02-26"
+    }
+  },
+  "14": {
+    "id": 14,
+    "nome": "Tatiane Moreira",
+    "documentoMascarado": "***.222.352-**",
+    "telefoneMascarado": "(11) *****-0494",
+    "emailMascarado": "t****@email.com",
+    "canalPreferido": "TELEFONE",
+    "consentimento": {
+      "ativo": true,
+      "canais": [
+        "TELEFONE"
+      ],
+      "atualizadoEm": "2026-06-15T17:22:00Z"
+    },
+    "ultimoNps": 10,
+    "veiculos": [
+      {
+        "vin": "9BF5WWL6LP3RL90L7",
+        "modelo": "Ranger",
+        "ano": 2020,
+        "placa": "PMX7X19"
+      }
+    ],
+    "resumoHistorico": {
+      "totalOrdens": 5,
+      "ticketMedio": 1158,
+      "ultimaVisita": "2026-02-13"
+    }
+  }
+}

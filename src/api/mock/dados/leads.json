@@ -1,0 +1,386 @@
+[
+  {
+    "id": 8,
+    "vin": "9BF2NPNC4S1X1FCW9",
+    "placa": "GCL9G73",
+    "status": "CONTATADO",
+    "score": 0.86,
+    "faixaRisco": "ALTO",
+    "motivoContato": "Revisao de 120.000 km prevista para 2027-02-27",
+    "acaoRecomendada": "Ligar oferecendo test-drive do novo modelo e avaliacao do usado",
+    "perfilComportamental": "ABANDONO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 8,
+      "nome": "Beatriz Carvalho",
+      "telefoneMascarado": "(11) *****-4568"
+    },
+    "veiculo": {
+      "modelo": "Ranger",
+      "versao": "Limited 3.0 V6",
+      "ano": 2020
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 4,
+    "vin": "9BFJKD4NL04BHG2Z4",
+    "placa": "XBH4G28",
+    "status": "AGENDADO",
+    "score": 0.84,
+    "faixaRisco": "ALTO",
+    "motivoContato": "Revisao de 40.000 km vencida ha 97 dias",
+    "acaoRecomendada": "Convidar para revisao antecipada com brinde de fidelidade",
+    "perfilComportamental": "FIEL",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 4,
+      "nome": "Patricia Gomes",
+      "telefoneMascarado": "(11) *****-7284"
+    },
+    "veiculo": {
+      "modelo": "Maverick",
+      "versao": "Lariat 2.0",
+      "ano": 2023
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 12,
+    "vin": "9BFHFX2N86KR4JYW3",
+    "placa": "BRL3K91",
+    "status": "OPEN",
+    "score": 0.7,
+    "faixaRisco": "ALTO",
+    "motivoContato": "Revisao de 90.000 km prevista para 2026-11-07",
+    "acaoRecomendada": "Ligar oferecendo test-drive do novo modelo e avaliacao do usado",
+    "perfilComportamental": "ABANDONO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 11,
+      "nome": "Ricardo Tavares",
+      "telefoneMascarado": "(11) *****-7531"
+    },
+    "veiculo": {
+      "modelo": "Mustang Mach-E",
+      "versao": "GT",
+      "ano": 2024
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 3,
+    "vin": "9BFRHMLMFR0P96DF3",
+    "placa": "FSM3V91",
+    "status": "CONTATADO",
+    "score": 0.67,
+    "faixaRisco": "MEDIO",
+    "motivoContato": "Revisao de 100.000 km prevista para 2026-11-17",
+    "acaoRecomendada": "Apresentar linha de pecas Motorcraft com preco competitivo",
+    "perfilComportamental": "ECONOMICO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 3,
+      "nome": "Joao Batista",
+      "telefoneMascarado": "(11) *****-2963"
+    },
+    "veiculo": {
+      "modelo": "Bronco Sport",
+      "versao": "Wildtrak 2.0",
+      "ano": 2022
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 15,
+    "vin": "9BF5WWL6LP3RL90L7",
+    "placa": "PMX7X19",
+    "status": "RECUSADO",
+    "score": 0.54,
+    "faixaRisco": "MEDIO",
+    "motivoContato": "Revisao de 120.000 km prevista para 2027-01-14",
+    "acaoRecomendada": "Ligar oferecendo test-drive do novo modelo e avaliacao do usado",
+    "perfilComportamental": "ABANDONO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 14,
+      "nome": "Tatiane Moreira",
+      "telefoneMascarado": "(11) *****-0494"
+    },
+    "veiculo": {
+      "modelo": "Ranger",
+      "versao": "Limited 3.0 V6",
+      "ano": 2020
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 11,
+    "vin": "9BFSKSX7MLBPT9272",
+    "placa": "CCK2C64",
+    "status": "OPEN",
+    "score": 0.53,
+    "faixaRisco": "MEDIO",
+    "motivoContato": "Revisao de 40.000 km vencida ha 81 dias",
+    "acaoRecomendada": "Convidar para revisao antecipada com brinde de fidelidade",
+    "perfilComportamental": "FIEL",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 10,
+      "nome": "Juliana Prado",
+      "telefoneMascarado": "(11) *****-3210"
+    },
+    "veiculo": {
+      "modelo": "Maverick",
+      "versao": "Lariat 2.0",
+      "ano": 2023
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 7,
+    "vin": "9BFB384GY4WZJDPH7",
+    "placa": "WLJ7R19",
+    "status": "OPEN",
+    "score": 0.51,
+    "faixaRisco": "MEDIO",
+    "motivoContato": "Revisao de 75.000 km prevista para 2027-01-24",
+    "acaoRecomendada": "Apresentar linha de pecas Motorcraft com preco competitivo",
+    "perfilComportamental": "ECONOMICO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 6,
+      "nome": "Luciana Mendes",
+      "telefoneMascarado": "(11) *****-5926"
+    },
+    "veiculo": {
+      "modelo": "EcoSport",
+      "versao": "Freestyle 1.5",
+      "ano": 2026
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 2,
+    "vin": "9BFT1S782CWZJG7X2",
+    "placa": "WFX2J64",
+    "status": "OPEN",
+    "score": 0.5,
+    "faixaRisco": "MEDIO",
+    "motivoContato": "Revisao de 80.000 km vencida ha 51 dias",
+    "acaoRecomendada": "Oferecer pacote de revisao com desconto de fidelidade",
+    "perfilComportamental": "ESQUECIDO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 2,
+      "nome": "Mariana Rocha",
+      "telefoneMascarado": "(11) *****-8642"
+    },
+    "veiculo": {
+      "modelo": "Territory",
+      "versao": "Titanium 1.5T",
+      "ano": 2021
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 10,
+    "vin": "9BF60R6786867X7T1",
+    "placa": "TYW1T37",
+    "status": "RECUSADO",
+    "score": 0.35,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 100.000 km prevista para 2026-10-04",
+    "acaoRecomendada": "Apresentar linha de pecas Motorcraft com preco competitivo",
+    "perfilComportamental": "ECONOMICO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 9,
+      "nome": "Marcos Vinicius",
+      "telefoneMascarado": "(11) *****-8889"
+    },
+    "veiculo": {
+      "modelo": "Bronco Sport",
+      "versao": "Wildtrak 2.0",
+      "ano": 2022
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 1,
+    "vin": "9BF8313PF9WBWDX01",
+    "placa": "WCD1Z37",
+    "status": "OPEN",
+    "score": 0.32,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 120.000 km prevista para 2026-10-14",
+    "acaoRecomendada": "Ligar oferecendo test-drive do novo modelo e avaliacao do usado",
+    "perfilComportamental": "ABANDONO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 1,
+      "nome": "Carlos Pereira",
+      "telefoneMascarado": "(11) *****-4321"
+    },
+    "veiculo": {
+      "modelo": "Ranger",
+      "versao": "Limited 3.0 V6",
+      "ano": 2020
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 9,
+    "vin": "9BFTD9B1FS40TRG00",
+    "placa": "FNP0C00",
+    "status": "AGENDADO",
+    "score": 0.18,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 80.000 km vencida ha 35 dias",
+    "acaoRecomendada": "Oferecer pacote de revisao com desconto de fidelidade",
+    "perfilComportamental": "ESQUECIDO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 8,
+      "nome": "Beatriz Carvalho",
+      "telefoneMascarado": "(11) *****-4568"
+    },
+    "veiculo": {
+      "modelo": "Territory",
+      "versao": "Titanium 1.5T",
+      "ano": 2021
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 5,
+    "vin": "9BFC05GG9JY36J9B5",
+    "placa": "LFX5V55",
+    "status": "RECUSADO",
+    "score": 0.16,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 90.000 km prevista para 2026-12-21",
+    "acaoRecomendada": "Ligar oferecendo test-drive do novo modelo e avaliacao do usado",
+    "perfilComportamental": "ABANDONO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 4,
+      "nome": "Patricia Gomes",
+      "telefoneMascarado": "(11) *****-7284"
+    },
+    "veiculo": {
+      "modelo": "Mustang Mach-E",
+      "versao": "GT",
+      "ano": 2024
+    },
+    "ultimoContatoEm": null,
+    "supressao": null,
+    "desfechos": []
+  },
+  {
+    "id": 6,
+    "vin": "9BFPPDCN0WNL6F676",
+    "placa": "JZY6N82",
+    "status": "OPEN",
+    "score": 0.34,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 40.000 km vencida ha 143 dias",
+    "acaoRecomendada": "Oferecer pacote de revisao com desconto de fidelidade",
+    "perfilComportamental": "ESQUECIDO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 5,
+      "nome": "Rafael Antunes",
+      "telefoneMascarado": "(11) *****-1605"
+    },
+    "veiculo": {
+      "modelo": "Ka",
+      "versao": "SE 1.0",
+      "ano": 2025
+    },
+    "ultimoContatoEm": null,
+    "supressao": {
+      "motivo": "LGPD_OPT_OUT",
+      "em": "2026-09-22T11:00:00Z"
+    },
+    "desfechos": []
+  },
+  {
+    "id": 13,
+    "vin": "9BFNFR521M8R9GGW4",
+    "placa": "TMW4M28",
+    "status": "OPEN",
+    "score": 0.87,
+    "faixaRisco": "ALTO",
+    "motivoContato": "Revisao de 40.000 km vencida ha 127 dias",
+    "acaoRecomendada": "Oferecer pacote de revisao com desconto de fidelidade",
+    "perfilComportamental": "ESQUECIDO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 12,
+      "nome": "Camila Freitas",
+      "telefoneMascarado": "(11) *****-1852"
+    },
+    "veiculo": {
+      "modelo": "Ka",
+      "versao": "SE 1.0",
+      "ano": 2025
+    },
+    "ultimoContatoEm": null,
+    "supressao": {
+      "motivo": "LGPD_OPT_OUT",
+      "em": "2026-09-22T11:00:00Z"
+    },
+    "desfechos": []
+  },
+  {
+    "id": 14,
+    "vin": "9BFXT2WTVLHWT09F5",
+    "placa": "SHP5M55",
+    "status": "CONTATADO",
+    "score": 0.2,
+    "faixaRisco": "BAIXO",
+    "motivoContato": "Revisao de 75.000 km prevista para 2026-12-11",
+    "acaoRecomendada": "Apresentar linha de pecas Motorcraft com preco competitivo",
+    "perfilComportamental": "ECONOMICO",
+    "geradoEm": "2026-09-15T11:00:00Z",
+    "cliente": {
+      "id": 12,
+      "nome": "Camila Freitas",
+      "telefoneMascarado": "(11) *****-1852"
+    },
+    "veiculo": {
+      "modelo": "EcoSport",
+      "versao": "Freestyle 1.5",
+      "ano": 2026
+    },
+    "ultimoContatoEm": null,
+    "supressao": {
+      "motivo": "LGPD_OPT_OUT",
+      "em": "2026-09-22T11:00:00Z"
+    },
+    "desfechos": []
+  }
+]
