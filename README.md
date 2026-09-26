@@ -102,7 +102,7 @@ roda o Metro, sem configurar nada. Para usar sem a API, crie um `.env.local` com
 ## Como rodar com a API (completo)
 
 1. **MySQL 8** instalado e rodando (usuário e senha padrão da API: `root` / `fiap`).
-2. **API:** clone a [vinsight-api](https://github.com/glaucoheitor21/vinsight-api) e rode `mvnw.cmd spring-boot:run`
+2. **API:** clone a [vinsight-api](https://github.com/Challenge-2026-VinsightFord/vinsight-api) e rode `mvnw.cmd spring-boot:run`
    (JDK 21). O banco `vinsight` e os dados de demonstração são criados sozinhos. Teste em
    <http://localhost:8080/actuator/health>.
 3. **App:** `npx expo start` neste repositório (acha a API sozinho), ou instale o `vinsight-api.apk` no
