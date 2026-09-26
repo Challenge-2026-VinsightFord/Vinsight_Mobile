@@ -14,6 +14,13 @@ cada contato, que realimenta o modelo.
 
 > *Dado bruto → score de churn → fila priorizada → app do consultor → registro de desfecho → realimentação do modelo.*
 
+## 🎬 Vídeo demonstrativo
+
+[![Assista à demonstração do VINSight Consultor](https://img.youtube.com/vi/dxPR_EM54N8/maxresdefault.jpg)](https://youtu.be/dxPR_EM54N8)
+
+> Clique na imagem para assistir no YouTube.
+
+
 ## Download do APK
 
 **[Baixar o APK (Releases)](https://github.com/Challenge-2026-VinsightFord/mobile_fiap/releases/latest)**
